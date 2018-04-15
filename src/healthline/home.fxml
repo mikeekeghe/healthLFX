@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox id="VBox" prefHeight="630.0" prefWidth="1200" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="healthline.HomeController">
+   <children>
+      <MenuBar fx:id="myMenuBar">
+         <menus>
+            <Menu mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem fx:id="menuExit" mnemonicParsing="false" onAction="#onClickExit" text="Exit" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   <AnchorPane id="AnchorPane" prefHeight="630.0" prefWidth="1200" style="-fx-background-color: A3F1FB;" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1">
+       <stylesheets>
+           <URL value="@darktheme.css" />
+       </stylesheets>
+         <children>
+            <AnchorPane fx:id="navigationPane" layoutX="-1.0" layoutY="84.0" prefHeight="560.0" prefWidth="346.0" style="-fx-background-color: #1d1d1d;">
+               <children>
+                  <Button layoutX="19.0" layoutY="251.0" mnemonicParsing="false" styleClass="button-no-show" />
+                  <Label layoutX="121.0" layoutY="288.0" styleClass="label-left-nav" text="Income Reports" textAlignment="CENTER" textFill="#fff9f9" underline="true" />
+                  <Label layoutX="101.0" layoutY="400.0" styleClass="label-left-nav" text="Expenditure Reports" textFill="#fff9f9" underline="true" />
+                  <Label layoutX="132.0" layoutY="498.0" styleClass="label-left-nav" text="Registrations" textFill="#fff9f9" underline="true" />
+                  <Button fx:id="btnIAddPatientVisit" layoutX="14.0" layoutY="8.0" mnemonicParsing="false" onAction="#onClickedAddPatientVisit" styleClass="button-no-borders" text="ADD PATIENT VISIT" />
+                  <Button fx:id="btnExpenditure" layoutX="13.0" layoutY="49.0" mnemonicParsing="false" onAction="#onClickedExpenditure" styleClass="button-no-borders" text="SPENT MONEY (Expenditure)" />
+                  <Button fx:id="btnAddNewItem" layoutX="18.0" layoutY="96.0" mnemonicParsing="false" onAction="#onClickedAddPatient" styleClass="button-no-borders" text="Register Patient" />
+                  <Button fx:id="btnAddHMO" layoutX="20.0" layoutY="218.0" mnemonicParsing="false" onAction="#onClickedAddNewHMO" styleClass="button-no-borders" text="Register A HMO" />
+                  <Button fx:id="btnAddDoctor" layoutX="19.0" layoutY="177.0" mnemonicParsing="false" onAction="#onClickedAddDoctor" styleClass="button-no-borders" text="Register A Doctor" />
+                  <Button fx:id="btnAddNewExpItem" layoutX="19.0" layoutY="137.0" mnemonicParsing="false" onAction="#onClickedAddExpItem" styleClass="button-no-borders" text="Add Expense Item" />
+                  <Button fx:id="btnThisWeek" layoutX="116.0" layoutY="312.0" mnemonicParsing="false" onAction="#onClickedThisWeekReport" styleClass="button-no-borders" text="This Week" />
+                  <Button fx:id="btnYesterday" layoutX="5.0" layoutY="343.0" mnemonicParsing="false" onAction="#onClickedYesterdayReport" styleClass="button-no-borders" text="Yesterday" />
+                  <Button fx:id="btnLastWeek" layoutX="116.0" layoutY="343.0" mnemonicParsing="false" onAction="#onClickedLastWeekReport" styleClass="button-no-borders" text="Last Week" />
+                  <Button fx:id="btnToday1" layoutX="26.0" layoutY="421.0" mnemonicParsing="false" onAction="#onClickTodayReportExp" styleClass="button-no-borders" text="Today" />
+                  <Button fx:id="btnYesterday1" layoutX="14.0" layoutY="454.0" mnemonicParsing="false" onAction="#onClickedYesterdayReportExp" styleClass="button-no-borders" text="Yesterday" />
+                  <Button fx:id="btnThisWeek1" layoutX="123.0" layoutY="421.0" mnemonicParsing="false" onAction="#onClickedThisWeekReportExp" styleClass="button-no-borders" text="This Week" />
+                  <Button fx:id="btnLastWeek1" layoutX="123.0" layoutY="454.0" mnemonicParsing="false" onAction="#onClickedLastWeekReportExp" styleClass="button-no-borders" text="Last Week" />
+                  <Button fx:id="btnAllPatients" layoutY="519.0" mnemonicParsing="false" onAction="#onClickedbtnAllPatients" styleClass="button-no-borders" text="All Patients" />
+                  <Button fx:id="btnAllDoctors" layoutX="120.0" layoutY="519.0" mnemonicParsing="false" onAction="#onClickedbtnAllDoctors" styleClass="button-no-borders" text="All Doctors" />
+                  <Button fx:id="btnThisMonth" layoutX="230.0" layoutY="312.0" mnemonicParsing="false" onAction="#onClickedThisMonthReport" styleClass="button-no-borders" text="This Month" />
+                  <Button fx:id="btnAllHmos" layoutX="236.0" layoutY="519.0" mnemonicParsing="false" onAction="#onClickedbtnAllHmos" styleClass="button-no-borders" text="All HMOs" />
+                  <Button fx:id="btnThisMonth1" layoutX="227.0" layoutY="421.0" mnemonicParsing="false" onAction="#onClickedThisMonthReportExp" styleClass="button-no-borders" text="This Month" />
+                  <Button fx:id="btnLastMonth1" layoutX="227.0" layoutY="454.0" mnemonicParsing="false" onAction="#onClickedLastMonthReportExp" styleClass="button-no-borders" text="Last Month" />
+                  <Button fx:id="btnLastMonth" layoutX="226.0" layoutY="343.0" mnemonicParsing="false" onAction="#onClickedLastMonthReport" styleClass="button-no-borders" text="Last Month" />
+                  <Button fx:id="btnToday" layoutX="29.0" layoutY="312.0" mnemonicParsing="false" onAction="#onClickTodayReport" styleClass="button-no-borders" text="Today" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="mainContentPane" layoutX="353.0" layoutY="85.0" prefHeight="560.0" prefWidth="849.0">
+               <children>
+                  <Label layoutX="382.0" layoutY="230.0" prefHeight="25.0" prefWidth="101.0" style="-fx-text-fill: black;" text="VERSION : 1.0" />
+                  <Label layoutX="164.0" layoutY="273.0" prefHeight="109.0" prefWidth="522.0" style="-fx-text-fill: black;" text="HealthLine Hospital Management Solution eliminate paper-based processes in health care organizations, manage patient information and allow clinicians and administrators make well-informed decisions in treatment and hospitalization procedures. In addition,  help health care organizations to automate bookkeeping" textAlignment="CENTER" wrapText="true" />
+                  <Label layoutX="293.0" layoutY="180.0" prefHeight="25.0" prefWidth="265.0" style="-fx-text-fill: black;" text="HOSPITAL MANAGEMENT SOLUTION" />
+                  <Label layoutX="349.0" layoutY="137.0" prefHeight="43.0" prefWidth="154.0" style="-fx-text-fill: black; -fx-font-size: 22pt;" text="HealthLine" underline="true">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="copyRight" layoutX="319.0" layoutY="471.0" prefHeight="69.0" prefWidth="345.0" textAlignment="CENTER" wrapText="true" />
+                  <ImageView fitHeight="69.0" fitWidth="69.0" layoutX="389.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/icons8-hospital-sign-50.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Label layoutX="14.0" layoutY="6.0" prefHeight="43.0" prefWidth="154.0" style="-fx-text-fill: black; -fx-font-size: 22pt;" text="HealthLine" underline="true">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="49.0" prefHeight="25.0" prefWidth="188.0" style="-fx-text-fill: black;" styleClass="label-top-left" text="HOSPITAL MANAGEMENT SOLUTION">
+               <font>
+                  <Font size="8.0" />
+               </font>
+            </Label>
+         </children>
+   </AnchorPane>
+   </children>
+</VBox>

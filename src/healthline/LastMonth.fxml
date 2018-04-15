@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="1450" style="-fx-background-color: A3F1FB;" stylesheets="@darktheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="healthline.LastMonthController">
+  <children>
+ 
+   
+            <Label layoutX="423.0" layoutY="14.0" text="LAST MONTH REPORT" />
+            <Button fx:id="btnClose" layoutX="18.0" layoutY="361.0" mnemonicParsing="false" onAction="#onClickClose" text="Close" />
+            <Label layoutX="18.0" layoutY="301.0" text="Total for Last Month was :" />
+            <Label fx:id="lblTotal" layoutX="222.0" layoutY="301.0" prefHeight="17.0" prefWidth="74.0" text="Total" />
+            <Label layoutX="395.0" layoutY="330.0" text="-" />
+            <Label layoutX="479.0" layoutY="330.0" text="=" />
+            <Label fx:id="lblBallance" layoutX="500.0" layoutY="330.0" prefHeight="21.0" prefWidth="74.0" text="Ballance" />
+            <Label fx:id="lblTotalExp" layoutX="405.0" layoutY="330.0" prefHeight="17.0" prefWidth="74.0" text="Expens" />
+            <Label fx:id="lblTotal2" layoutX="331.0" layoutY="330.0" prefHeight="21.0" prefWidth="61.0" text="Income" />
+            <Label layoutX="19.0" layoutY="330.0" prefHeight="21.0" prefWidth="296.0" text="Total income - Expenses  for Last Month is :" />
+            <TableView fx:id="tableReport" layoutX="18.0" layoutY="65.0" prefHeight="200.0" prefWidth="1422">
+               <columns>
+                  <TableColumn fx:id="idCol" editable="false" prefWidth="42.0" text="ID" />
+                  <TableColumn fx:id="patientCol" editable="false" prefWidth="161.0" text="PATIENT" />
+                  <TableColumn fx:id="doctorCol" editable="false" prefWidth="135.0" text="DOCTOR" />
+                  <TableColumn fx:id="dateCol" editable="false" minWidth="0.0" prefWidth="84.0" text="DATE" />
+                  <TableColumn fx:id="amountCol" editable="false" minWidth="0.0" prefWidth="128.0" text="AMOUNT" />
+                  <TableColumn fx:id="treatmentCol" editable="false" minWidth="0.0" prefWidth="169.0" text="TREATMENT" />
+                  <TableColumn fx:id="medicationCol" editable="false" minWidth="0.0" prefWidth="111.0" text="MEDICATION" />
+                  <TableColumn fx:id="diagnosisCol" editable="false" minWidth="0.0" prefWidth="150.0" text="DIAGNOSIS" />
+                  <TableColumn fx:id="notesCol" editable="false" minWidth="0.0" prefWidth="105.0" text="NOTES" />
+                  <TableColumn fx:id="invoiceCol" editable="false" minWidth="0.0" prefWidth="105.0" text="INVOICE No." />
+                  <TableColumn fx:id="roomCol" editable="false" minWidth="0.0" prefWidth="105.0" text="ROOM No." />
+                  <TableColumn fx:id="typeCol" editable="false" minWidth="0.0" prefWidth="105.0" text="PATIENT TYPE" />
+               </columns>
+            </TableView>
+            <Button fx:id="btnDownloadReport" layoutX="21.0" layoutY="19.0" mnemonicParsing="false" onAction="#onClickDownloadReport" text="Download Report" />
+         </children>
+    </AnchorPane>

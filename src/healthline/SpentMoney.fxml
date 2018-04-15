@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="healthline.SpentMoneyController">
+  <children>
+   
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: A3F1FB;" stylesheets="@darktheme.css" >
+         <children>
+            <Label layoutX="215.0" layoutY="14.0" text="SPENT MONEY (EXPENDITURE)" />
+            <Button fx:id="btnClose" layoutX="574.0" layoutY="336.0" mnemonicParsing="false" onAction="#onClickClose" text="Close" />
+            <ChoiceBox fx:id="choicebox_name" layoutX="127.0" layoutY="45.0" prefHeight="25.0" prefWidth="425.0" />
+            <TextField fx:id="date_time_box" disable="true" editable="false" layoutX="127.0" layoutY="215.0" />
+            <Label layoutX="49.0" layoutY="219.0" text="DATE/TIME:" />
+            <Label layoutX="81.0" layoutY="49.0" text="NAME: " />
+            <Label layoutX="29.0" layoutY="95.0" prefHeight="21.0" prefWidth="101.0" text="DESCRIPTION:" />
+            <Label layoutX="40.0" layoutY="155.0" prefHeight="21.0" prefWidth="90.0" text="COST PRICE:" />
+            <TextField fx:id="cost_box" layoutX="127.0" layoutY="151.0" promptText="0" />
+            <TextArea fx:id="description_box" layoutX="127.0" layoutY="83.0" prefHeight="58.0" prefWidth="425.0" promptText="-optional-" />
+            <Button layoutX="127.0" layoutY="265.0" mnemonicParsing="false" onAction="#onAddButtonClicked" text="ADD" />
+            <Button layoutX="225.0" layoutY="265.0" mnemonicParsing="false" onAction="#onClearButtonClicked" text="CLEAR" />
+            <Label layoutX="81.0" layoutY="189.0" text="UNITS:" />
+            <TextField fx:id="quantity_box" layoutX="127.0" layoutY="184.0" promptText="-optional" />
+         </children>
+    </AnchorPane>
+  </children>
+</AnchorPane>

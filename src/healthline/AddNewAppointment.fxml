@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="630.0" prefWidth="674.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="healthline.AddNewAppointmentController">
+  <children>
+ 
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="550.0" prefWidth="674.0" style="-fx-background-color: A3F1FB;" stylesheets="@darktheme.css" >
+         <children>
+            <ChoiceBox fx:id="choicebox_patient" layoutX="148.0" layoutY="54.0" prefHeight="25.0" prefWidth="425.0" />
+            <TextArea fx:id="symptoms_box" layoutX="148.0" layoutY="94.0" prefHeight="58.0" prefWidth="425.0" />
+            <TextField fx:id="treatment_box" layoutX="146.0" layoutY="160.0" prefHeight="37.0" prefWidth="425.0" />
+            <TextField fx:id="medication_box" layoutX="146.0" layoutY="203.0" prefHeight="25.0" prefWidth="425.0" />
+            <TextField fx:id="diagnosis_box" layoutX="145.0" layoutY="247.0" prefHeight="37.0" prefWidth="425.0" />
+            <ChoiceBox fx:id="choicebox_doctors" layoutX="149.0" layoutY="295.0" prefHeight="25.0" prefWidth="425.0" />
+            <TextArea fx:id="notes_box" layoutX="146.0" layoutY="335.0" prefHeight="58.0" prefWidth="425.0" />
+            <TextField fx:id="amount_box" layoutX="146.0" layoutY="400.0" prefHeight="37.0" prefWidth="177.0" />
+            <TextField fx:id="date_time_box" editable="false" layoutX="409.0" layoutY="400.0" prefHeight="37.0" prefWidth="159.0" />
+            <ChoiceBox fx:id="choicebox_types" layoutX="148.0" layoutY="443.0" prefHeight="31.0" prefWidth="177.0" />
+            <TextField fx:id="roomNo_box" layoutX="409.0" layoutY="443.0" prefHeight="37.0" prefWidth="159.0" promptText="-NONE-" />
+            <Label layoutX="280.0" layoutY="23.0" prefHeight="21.0" prefWidth="189.0" text="ADD NEW PATIENT VISIT" />
+            <Button fx:id="btnClose" layoutX="587.0" layoutY="571.0" mnemonicParsing="false" onAction="#onClickClose" text="Close" />
+            <Label layoutX="53.0" layoutY="214.0" text="MEDICATION:" />
+            <Label layoutX="66.0" layoutY="252.0" prefHeight="21.0" prefWidth="84.0" text="DIAGNOSIS:" />
+            <Label layoutX="83.0" layoutY="56.0" prefHeight="21.0" prefWidth="62.0" text="PATIENT:" />
+            <Button fx:id="btnAdd" layoutX="156.0" layoutY="531.0" mnemonicParsing="false" onAction="#onAddButtonClicked" text="ADD">
+               <effect>
+                  <Bloom />
+               </effect></Button>
+            <Button fx:id="btnClear" layoutX="253.0" layoutY="531.0" mnemonicParsing="false" onAction="#onClearButtonClicked" text="CLEAR" />
+            <Label layoutX="7.0" layoutY="294.0" prefHeight="21.0" prefWidth="141.0" text="DOCTOR TREATING:" />
+            <Label layoutX="80.0" layoutY="411.0" prefHeight="21.0" prefWidth="69.0" text="AMOUNT:" />
+            <Label layoutX="59.0" layoutY="175.0" prefHeight="21.0" prefWidth="90.0" text="TREATMENT:" />
+            <Label layoutX="60.0" layoutY="94.0" prefHeight="21.0" prefWidth="86.0" text="SYMPTOMS:" />
+            <Label layoutX="96.0" layoutY="343.0" prefHeight="21.0" prefWidth="55.0" text="NOTES:" />
+            <Label layoutX="323.0" layoutY="413.0" prefHeight="21.0" prefWidth="90.0" text="DATE/TIME:" />
+            <Label layoutX="44.0" layoutY="445.0" prefHeight="21.0" prefWidth="101.0" text="PATIENT TYPE:" />
+            <Label layoutX="333.0" layoutY="448.0" prefHeight="21.0" prefWidth="86.0" text="ROOM No." />
+            <TextField fx:id="invoiceNo_box" layoutX="149.0" layoutY="481.0" prefHeight="37.0" prefWidth="177.0" promptText="-NONE-" />
+            <Label layoutX="58.0" layoutY="489.0" prefHeight="21.0" prefWidth="101.0" text="INVOICE No." />
+         </children>
+    </AnchorPane>
+  </children>
+</AnchorPane>
